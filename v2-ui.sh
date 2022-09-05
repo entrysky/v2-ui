@@ -92,7 +92,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+    bash <(curl -Ls https://github.com/entrysky/v2-ui/blob/4af430dcafbd11feb38887490d1f3f4a71aedb0d/v2-ui.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -111,7 +111,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://blog.sprov.xyz/v2-ui.sh)
+    bash <(curl -Ls https://github.com/entrysky/v2-ui/blob/4af430dcafbd11feb38887490d1f3f4a71aedb0d/v2-ui.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启面板${plain}"
         exit
